@@ -40,7 +40,7 @@ const gScroll = (dir) => {
         </router-link>
       </div>
       <ul class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#b9cbe8]">
-        <li class="flex items-center gap-2"><span class="text-brand-300">✓</span> Réponse sous 24 h</li>
+        <li class="flex items-center gap-2"><span class="text-brand-300">✓</span> Réponse dans les plus brefs délais</li>
         <li class="flex items-center gap-2"><span class="text-brand-300">✓</span> Garantie décennale</li>
         <li class="flex items-center gap-2"><span class="text-brand-300">✓</span> Interlocuteur unique</li>
       </ul>

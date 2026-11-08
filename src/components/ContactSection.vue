@@ -59,7 +59,7 @@ async function submit() {
   <div class="rounded-2xl bg-gradient-to-r from-brand-950 to-brand-800 text-white p-8 sm:p-12 flex flex-wrap gap-7 items-center justify-between">
     <div class="flex-1 min-w-64">
       <h2 class="text-2xl font-extrabold mb-2">Contactez-nous</h2>
-      <p class="text-[#cddaf0]">Réponse sous 24 h. Décrivez votre projet en quelques lignes, nous vous recontactons rapidement.</p>
+      <p class="text-[#cddaf0]">Décrivez votre projet en quelques lignes, nous vous recontactons dans les plus brefs délais.</p>
       <p class="mt-4 text-sm text-[#b9cbe8]">📍 Zone d'intervention : Alsace</p>
     </div>
 
@@ -67,7 +67,7 @@ async function submit() {
       <div v-if="sent" class="text-center py-10">
         <span class="text-4xl">✅</span>
         <b class="block text-lg mt-2">Demande envoyée&nbsp;!</b>
-        <p class="text-[#cddaf0] text-sm mt-1.5">Merci, nous vous recontactons sous 24 h.</p>
+        <p class="text-[#cddaf0] text-sm mt-1.5">Merci, nous vous recontactons dans les plus brefs délais.</p>
       </div>
 
       <form v-else class="grid grid-cols-1 sm:grid-cols-2 gap-3.5" novalidate @submit.prevent="submit">

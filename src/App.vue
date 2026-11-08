@@ -4,7 +4,12 @@ import SiteHeader from "./components/SiteHeader.vue";
 import SiteFooter from "./components/SiteFooter.vue";
 
 const showSticky = ref(false);
-const onScroll = () => (showSticky.value = window.scrollY > 500);
+const onScroll = () => {
+  // Barre masquée quand le formulaire de contact (#contact) entre dans l'écran.
+  const el = document.getElementById("contact");
+  const formVisible = el && el.getBoundingClientRect().top < window.innerHeight;
+  showSticky.value = window.scrollY > 500 && !formVisible;
+};
 onMounted(() => window.addEventListener("scroll", onScroll, { passive: true }));
 onUnmounted(() => window.removeEventListener("scroll", onScroll));
 </script>
