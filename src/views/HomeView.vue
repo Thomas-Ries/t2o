@@ -74,8 +74,8 @@ import ContactSection from "../components/ContactSection.vue";
       </div>
       <div v-reveal class="lg:col-span-5 rounded-xl overflow-hidden shadow-lg aspect-[4/3] bg-brand-950">
         <img
-          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=70"
-          alt="Équipe T2O Bâtiment sur chantier"
+          src="https://images.pexels.com/photos/17410734/pexels-photo-17410734.jpeg?auto=compress&cs=tinysrgb&w=1000"
+          alt="Artisan T2O Bâtiment sur chantier"
           class="h-full w-full object-cover"
           loading="lazy"
         />

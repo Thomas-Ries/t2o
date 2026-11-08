@@ -12,8 +12,11 @@ export const CONTACT = {
   gerant: "Christophe Niederberger",
 };
 
-// Photos d'illustration Unsplash (gratuites, MVP). À remplacer par de vraies
-// photos de chantiers quand elles seront disponibles.
+// Photos libres de droits, vérifiées une par une (contenu + disponibilité).
+// Pexels : artisans au travail sur chaque spécialité. À remplacer par de
+// vraies photos de chantiers quand elles seront disponibles.
+const px = (id, w = 1200) =>
+  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
 const u = (id, w = 1200) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=70`;
 
@@ -23,84 +26,84 @@ export const SPECS = [
     title: "Plâtrerie",
     badge: "Cloisons & plafonds",
     lead: "Cloisons, doublages, faux plafonds et rénovation de vos murs et plafonds, avec un rendu impeccable prêt à peindre.",
-    photo: u("1581093458791-9f3fe6f0e8b4"),
+    photo: px(4981812), // ouvrier posant une plaque de placo
     items: [
       ["Cloisons & doublages", "Cloisons en plaques de plâtre, doublages isolants, cloisons phoniques."],
       ["Faux plafonds", "Plafonds démontables, spots encastrés, caissons lumineux."],
       ["Rénovation de murs", "Reprise des fissures, enduits, préparation des supports."],
       ["Dressing & rangements", "Niches, bibliothèques intégrées, sur-mesure."],
     ],
-    gallery: [u("1581093458791-9f3fe6f0e8b4"), u("1581094794329-c8112a89af12", 900), u("1503387762-592deb58ef4e", 900)],
+    gallery: [px(4981812, 900), px(5493669, 900), px(804392, 900)],
   },
   {
     slug: "sanitaire",
     title: "Sanitaire",
     badge: "Plomberie & salle de bain",
     lead: "Installation et rénovation de salles de bain, WC, cuisines : plomberie complète, robinetterie et mise aux normes.",
-    photo: u("1556909212-d5b60b7b071a"),
+    photo: px(6419128), // plombier sous un évier
     items: [
       ["Salle de bain complète", "De la dépose à la pose finitions, coordination de tous les corps de métier."],
       ["Plomberie", "Alimentation, évacuation, remplacement de tuyauteries."],
       ["WC & robinetterie", "Pose de WC suspendus, mitigeurs, douches et baignoires."],
       ["Mise aux normes", "Conformité électrique et sanitaire des pièces humides."],
     ],
-    gallery: [u("1556909212-d5b60b7b071a"), u("1620641788421-7a1c342ea42e", 900), u("1567016432779-094069422307", 900)],
+    gallery: [px(6419128, 900), u("1517646287270-a5a9ca602e5c", 900), px(804392, 900)],
   },
   {
     slug: "electricite",
     title: "Électricité",
     badge: "Installation & rénovation",
     lead: "Installations électriques neuves ou en rénovation : tableaux, circuits, éclairage et mise aux normes NF C 15-100.",
-    photo: u("1581092160562-40aa08e78837"),
+    photo: px(33694019), // électricien sur un tableau ouvert
     items: [
       ["Tableaux électriques", "Remplacement et refonte complète du tableau, disjoncteurs."],
       ["Circuits & prises", "Création de circuits, prises et interrupteurs, home wiring."],
       ["Éclairage", "Spots, réglettes, éclairage LED, commande domotique simple."],
       ["Mise aux normes", "Diagnostic et mise en conformité NF C 15-100."],
     ],
-    gallery: [u("1581092160562-40aa08e78837"), u("1621905251189-08b45d6a269e", 900), u("1503387762-592deb58ef4e", 900)],
+    gallery: [px(33694019, 900), px(28265032, 900), u("1621905251189-08b45d6a269e", 900)],
   },
   {
     slug: "isolation",
     title: "Isolation",
     badge: "Confort & énergie",
     lead: "Isolation thermique et phonique des murs, combles et planchers pour réduire vos factures et gagner en confort.",
-    photo: u("1584266585671-38a5a8d4aa52"),
+    photo: px(6124239), // ouvrier sur laine de roche
     items: [
       ["Isolation des murs", "Doublage isolant sous placo, isolation thermique par l'intérieur."],
       ["Combles & rampants", "Soufflage, panneaux, isolation des combles perdus ou aménagés."],
       ["Isolation phonique", "Cloisons acoustiques, sols flottants, traitement des bruits."],
       ["Aides & diagnostics", "Accompagnement pour les aides à la rénovation énergétique."],
     ],
-    gallery: [u("1584266585671-38a5a8d4aa52"), u("1504302646594-30c516bc48a9", 900), u("1503387762-592deb58ef4e", 900)],
+    gallery: [px(6124239, 900), px(804392, 900), px(5493669, 900)],
   },
   {
     slug: "carrelage",
     title: "Carrelage",
     badge: "Sols & murs",
     lead: "Pose de carrelage sols et murs, faïence, tomette et grandes formats : joints soignés et surfaces parfaitement planes.",
-    photo: u("1595197512996-3629c4a9dd6e"),
+    photo: px(18861859), // matériel de carrelage sur chantier
     items: [
       ["Sols", "Carrelage intérieur, préparation des chapes, joints et finitions."],
       ["Murs & faïence", "Crédences de cuisine, salles de bain, murs de douche."],
       ["Grandes formats", "Porcelaine grand format, pose collée ou scellée."],
       ["Tomette & pierre", "Pose traditionnelle, tomettes, pierres naturelles."],
     ],
-    gallery: [u("1595197512996-3629c4a9dd6e"), u("1560185007-cde436f6a4d0", 900), u("1620641788421-7a1c342ea42e", 900)],
+    gallery: [px(18861859, 900), px(9690090, 900), px(4676626, 900)],
   },
   {
     slug: "peinture",
     title: "Peinture",
     badge: "Finitions & décoration",
     lead: "Peinture intérieure, enduits décoratifs et finitions soignées : l'habit neuf sans les désagréments d'un chantier.",
-    photo: u("1562259949-e8e058e1d84e"),
+    photo: px(18369835), // peintre au rouleau
     items: [
       ["Peinture intérieure", "Murs, plafonds, boiseries, glycéro et acrylique."],
       ["Enduits décoratifs", "Crépis, béton ciré, enduits à la chaux."],
       ["Papiers peints", "Pose de revêtements muraux, intissés."],
       ["Préparation des supports", "Ponçage, rebouchage, sous-couches adaptées."],
     ],
-    gallery: [u("1562259949-e8e058e1d84e"), u("1541888946425-d81bb19240f1", 900), u("1589939705954-38808f270f8b", 900)],
+    gallery: [px(5493653, 900), px(7218579, 900), px(5691592, 900)],
   },
 ];
 

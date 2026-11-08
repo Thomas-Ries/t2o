@@ -28,8 +28,8 @@ function down(e) {
   >
     <!-- Après -->
     <img
-      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=70"
-      alt="Chantier après intervention"
+      src="https://images.pexels.com/photos/6238679/pexels-photo-6238679.jpeg?auto=compress&cs=tinysrgb&w=1200"
+      alt="Intérieur rénové, moderne et lumineux"
       class="absolute inset-0 h-full w-full object-cover"
       loading="lazy"
     />
@@ -38,8 +38,8 @@ function down(e) {
     <!-- Avant (clippé) -->
     <div class="absolute inset-0 overflow-hidden" :style="{ clipPath: `inset(0 ${100 - pct}% 0 0)` }">
       <img
-        src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&w=1200&q=70"
-        alt="Chantier avant intervention"
+        src="https://images.pexels.com/photos/804392/pexels-photo-804392.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        alt="Pièce en rénovation avant intervention"
         class="absolute inset-0 h-full w-full object-cover"
         loading="lazy"
       />
