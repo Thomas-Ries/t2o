@@ -20,7 +20,23 @@ function json(data, status = 200) {
 }
 
 function clean(value, max) {
-  return String(value || "").trim().slice(0, max);
+  // Anti-injection : retire tout caractère de contrôle (retours ligne, nul…)
+  // avant tout usage — impossible de falsifier les en-têtes ou le corps.
+  return String(value || "")
+    .replace(/[\u0000-\u001f\u007f]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, max);
+}
+
+// Un e-mail d'en-tête doit être d'une propreté absolue : pas de retours
+// ligne (injection d'en-têtes), structure locale@domaine minimale.
+function safeEmail(value) {
+  const v = String(value || "").trim();
+  if (!v) return "";
+  if (/[\r\n\u0000-\u001f]/.test(v)) return "";
+  if (!/^[^\s@]{1,64}@[^\s@]{1,255}\.[^\s@]{2,}$/.test(v)) return "";
+  return v.slice(0, 120);
 }
 
 async function sendEmail(env, d) {
@@ -77,7 +93,7 @@ export default {
         const data = {
           nom: clean(d.nom, 80),
           tel: clean(d.tel, 30),
-          email: clean(d.email, 120),
+          email: safeEmail(d.email),
           localite: clean(d.localite, 100),
           specialite: clean(d.specialite, 60),
           message: clean(d.message, 3000),
@@ -85,6 +101,17 @@ export default {
 
         if (!data.nom || !data.tel || !data.localite || !data.message) {
           return json({ ok: false, error: "champs manquants" }, 400);
+        }
+        // Téléphone : exactement 10 chiffres (numéro français).
+        if (!/^0\d{9}$/.test(data.tel.replace(/\s/g, ""))) {
+          return json({ ok: false, error: "téléphone invalide" }, 400);
+        }
+        data.tel = data.tel.replace(/\s/g, "");
+        // Le nom et la localité sont du texte simple : pas de chevrons ni de
+        // caractères exotiques (aucun HTML n'est généré depuis ces champs,
+        // mais on n'accepte pas non plus les tentatives d'injection).
+        for (const f of [data.nom, data.localite]) {
+          if (/[<>{}\\]/.test(f)) return json({ ok: false, error: "caractères non autorisés" }, 400);
         }
         if (data.specialite && !ALLOWED_SPECS.includes(data.specialite)) {
           data.specialite = "Autre / plusieurs spécialités";

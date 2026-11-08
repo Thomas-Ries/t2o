@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { SPECS } from "../data/site";
 
 const props = defineProps({ preset: { type: String, default: "" } });
@@ -21,8 +21,19 @@ const autosize = (e) => {
   el.style.height = Math.min(el.scrollHeight + 2, 320) + "px";
 };
 
+// Téléphone : uniquement les chiffres, 10 max (numéro français).
+const onTel = () => {
+  form.value.tel = form.value.tel.replace(/[^\d]/g, "").slice(0, 10);
+};
+
+const telValide = computed(() => /^0\d{9}$/.test(form.value.tel));
+
 async function submit() {
   error.value = "";
+  if (!telValide.value) {
+    error.value = "Numéro invalide : 10 chiffres attendus (ex. 0627370651).";
+    return;
+  }
   busy.value = true;
   try {
     const res = await fetch("/api/contact", {
@@ -71,10 +82,13 @@ async function submit() {
         <label class="block">
           <span class="block text-[13px] font-semibold text-[#dbe6f7] mb-1.5">Téléphone <span class="text-brand-300">*</span></span>
           <input
-            v-model.trim="form.tel"
+            v-model="form.tel"
+            @input="onTel"
             required
-            maxlength="30"
-            type="tel"
+            maxlength="10"
+            inputmode="numeric"
+            autocomplete="tel"
+            type="text"
             placeholder="06 12 34 56 78"
             class="w-full rounded-[10px] bg-white/[.12] border border-white/30 px-3.5 py-2.5 text-white outline-none placeholder:text-[#8fa8cc] focus:border-brand-300 focus:bg-white/[.18]"
           />
