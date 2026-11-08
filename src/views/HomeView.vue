@@ -49,10 +49,13 @@ const gScroll = (dir) => {
 
   <!-- Bandeau de confiance -->
   <section class="border-y border-slate-200 bg-white">
-    <div class="mx-auto max-w-6xl px-5 sm:px-6 py-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-2.5 text-sm text-slate-600">
-      <span class="flex items-center gap-2 font-semibold text-slate-800">🤝 Partenaire Espace Aubade Sélestat</span>
-      <span class="flex items-center gap-2"><span class="text-brand-600">✓</span> Garantie décennale sur toutes nos réalisations</span>
-      <span class="flex items-center gap-2"><span class="text-brand-600">✓</span> Artisan local — SIREN 887 960 318</span>
+    <div class="mx-auto max-w-6xl px-5 sm:px-6 py-7 flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
+      <span class="flex items-center gap-3.5">
+        <img src="/logos/aubade.svg" alt="Espace Aubade" class="h-11 w-auto" />
+        <span class="text-[15px] font-semibold text-slate-800">Partenaire Espace Aubade Sélestat</span>
+      </span>
+      <span class="flex items-center gap-2 text-[15px] text-slate-600"><span class="text-brand-600">✓</span> Garantie décennale sur toutes nos réalisations</span>
+      <span class="flex items-center gap-2 text-[15px] text-slate-600"><span class="text-brand-600">✓</span> Artisan local</span>
     </div>
   </section>
 
