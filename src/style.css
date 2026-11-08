@@ -26,6 +26,13 @@ body {
   color: var(--color-ink);
   background: #fff;
   overflow-x: hidden;
+  /* Le header est fixe : on réserve sa hauteur sous la barre. */
+  padding-top: 68px;
+}
+
+/* Les ancres (#contact…) ne passent pas sous le header fixe. */
+section[id] {
+  scroll-margin-top: 88px;
 }
 
 /* Apparition au scroll (directive v-reveal) */
