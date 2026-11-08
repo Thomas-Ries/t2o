@@ -46,12 +46,30 @@ SPA sont assurées par `_redirects`.
 Tout le contenu éditorial (spécialités, FAQ, témoignages, coordonnées,
 photos) vit dans `src/data/site.js`.
 
-## Deploy Cloudflare (drag & drop)
+## Deploy Cloudflare
+
+### En une commande (wrangler)
+
+```bash
+npm run deploy
+```
+
+Build puis envoi du `dist/` sur Cloudflare Pages. La première fois :
+
+```bash
+npx wrangler login   # ouvre le navigateur, connexion au compte Cloudflare
+npx wrangler pages project create t2o   # crée le projet (une seule fois)
+```
+
+Ensuite chaque `npm run deploy` met le site en ligne directement
+(l'équivalent du drag & drop, en ligne de commande — même mécanisme Direct Upload).
+
+### En drag & drop
 
 1. `npm run build`
 2. Cloudflare Dashboard → Workers & Pages → Create → Pages → Upload assets
 3. Glisser le **contenu** de `dist/`
-4. Ajouter les variables ci-dessus dans Settings → Variables
+4. Ajouter les variables ci-dessous dans Settings → Variables
 5. Redéployer pour prendre en compte les variables
 
 ## RGPD
