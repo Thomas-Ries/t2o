@@ -189,7 +189,6 @@ const gScroll = (dir) => {
       <SectionHead kicker="Ils nous ont fait confiance" title="Ce que disent nos clients" />
       <div class="grid gap-5 md:grid-cols-3">
         <div v-for="t in TESTIMONIALS" :key="t[0]" v-reveal class="bg-white border border-hairline rounded-xl p-6 min-w-0 break-words">
-          <div class="text-[#f5a623] tracking-[2px] mb-2.5 text-sm">★★★★★</div>
           <p class="text-[15px] italic">« {{ t[2] }} »</p>
           <div class="mt-3.5 text-[13px] text-muted"><b class="block text-brand-950">{{ t[0] }}</b>{{ t[1] }}</div>
         </div>
