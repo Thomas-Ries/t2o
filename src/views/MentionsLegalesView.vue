@@ -35,8 +35,16 @@ import { CONTACT } from "../data/site";
       <div>
         <h2 class="text-xl font-extrabold text-brand-950 mb-3">Propriété intellectuelle</h2>
         <p>
-          L'ensemble du site (textes, visuels, logo) est protégé. Toute reproduction sans autorisation écrite
+          L'ensemble du site (textes, mise en page, logo T2O) est protégé. Toute reproduction sans autorisation écrite
           préalable de T2O Bâtiment est interdite.
+        </p>
+        <p class="mt-2">
+          Le logotype « Espace Aubade » est une marque déposée d'Espace Aubade, utilisée ici uniquement pour signaler
+          notre partenariat avec le magasin Espace Aubade de Sélestat, conformément à leur charte graphique.
+        </p>
+        <p class="mt-2">
+          Les photographies de ce site proviennent de la banque d'images Pexels (licence d'utilisation gratuite, sans
+          attribution obligatoire), dans l'attente de photographies de nos chantiers. Elles ne sont pas contractuelles.
         </p>
       </div>
       <p class="text-sm">
