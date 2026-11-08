@@ -201,7 +201,7 @@ const gScroll = (dir) => {
   <section class="py-16 sm:py-18">
     <div class="mx-auto max-w-6xl px-5 sm:px-6">
       <SectionHead kicker="Questions fréquentes" title="Vous vous demandez peut-être…" />
-      <div class="max-w-3xl grid gap-2.5">
+      <div class="max-w-3xl mx-auto grid gap-2.5">
         <details v-for="f in FAQ" :key="f[0]" v-reveal class="bg-white border border-hairline rounded-xl overflow-hidden">
           <summary class="flex justify-between items-center gap-3 px-5 py-4.5 font-semibold cursor-pointer list-none">
             {{ f[0] }}
