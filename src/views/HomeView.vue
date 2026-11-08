@@ -86,7 +86,7 @@ const gScroll = (dir) => {
             <span><b>Devis détaillé</b> — aucune surprise sur la facture finale.</span>
           </li>
         </ul>
-        <div class="mt-8 grid grid-cols-3 gap-4">
+        <div class="mt-8 grid grid-cols-2 gap-4">
           <div v-for="(s, i) in STATS" :key="i" class="bg-white border border-hairline rounded-xl px-4 py-5 text-center">
             <b v-countup="s" class="block text-2xl sm:text-[1.7rem] text-brand-600 font-extrabold">0</b>
             <span class="text-[13px] text-muted">{{ s[2] }}</span>

@@ -119,9 +119,8 @@ export const FAQ = [
 ];
 
 export const STATS = [
-  [30, " ans", "d'expérience du gérant"],
-  [5, "+", "ans d'entreprise (2020)"],
   [6, "", "corps de métier"],
+  [30, " ans", "d'expérience"],
 ];
 
 // Pages ville — SEO local. Le formulaire y est pré-rempli sur la localité.
