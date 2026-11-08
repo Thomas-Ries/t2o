@@ -73,11 +73,6 @@ const isActive = (slug) => route.params.slug === slug;
               Contact
             </router-link>
           </li>
-          <li>
-            <router-link to="/mentions-legales" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-soft">
-              Mentions légales
-            </router-link>
-          </li>
         </ul>
       </nav>
 
@@ -104,7 +99,6 @@ const isActive = (slug) => route.params.slug === slug;
       </router-link>
       <p class="px-3 pt-3 pb-1 text-[11px] font-bold uppercase tracking-widest text-muted">Informations</p>
       <router-link to="/#contact" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-soft">Contact</router-link>
-      <router-link to="/mentions-legales" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-soft">Mentions légales</router-link>
       <router-link to="/politique-confidentialite" class="block px-3 py-2.5 rounded-lg text-sm font-medium text-slate-700 hover:bg-soft">Politique de confidentialité</router-link>
     </nav>
   </header>
