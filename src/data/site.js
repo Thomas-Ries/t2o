@@ -109,12 +109,6 @@ export const SPECS = [
 
 export const specBySlug = (slug) => SPECS.find((s) => s.slug === slug);
 
-export const TESTIMONIALS = [
-  ["Isabelle D.", "Saint-Pierre-Bois", "Rénovation complète de notre salle de bain : chantier propre, délais respectés et un rendu magnifique. On recommande les yeux fermés."],
-  ["Marc et Sylvie R.", "Sélestat", "Cloison, électricité et peinture pour l'aménagement de nos combles : un seul interlocuteur du début à la fin, très rassurant."],
-  ["Jean-Luc M.", "Villé", "Carrelage et faïence posés avec un soin remarquable. Expérience et conseil au top, comme promis au téléphone."],
-];
-
 export const FAQ = [
   ["Sur quelle zone intervenez-vous ?", "Nous intervenons dans toute l'Alsace (Bas-Rhin et Haut-Rhin), depuis notre atelier de Saint-Pierre-Bois, dans la vallée de Villé."],
   ["Comment se passe une prise de contact ?", "Vous décrivez votre projet via le formulaire ou vous nous appelez. Nous échangeons sur votre besoin, puis nous planifions une visite sur place avant toute intervention."],

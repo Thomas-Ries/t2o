@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import { SPECS, TESTIMONIALS, FAQ, STATS, CITIES } from "../data/site";
+import { SPECS, FAQ, STATS, CITIES } from "../data/site";
 import SectionHead from "../components/SectionHead.vue";
 import SpecCarousel from "../components/SpecCarousel.vue";
 import BaSlider from "../components/BaSlider.vue";
@@ -184,18 +184,6 @@ const gScroll = (dir) => {
   </section>
 
   <!-- Témoignages -->
-  <section class="py-16 sm:py-18 bg-soft">
-    <div class="mx-auto max-w-6xl px-5 sm:px-6">
-      <SectionHead kicker="Ils nous ont fait confiance" title="Ce que disent nos clients" />
-      <div class="grid gap-5 md:grid-cols-3">
-        <div v-for="t in TESTIMONIALS" :key="t[0]" v-reveal class="bg-white border border-hairline rounded-xl p-6 min-w-0 break-words">
-          <p class="text-[15px] italic">« {{ t[2] }} »</p>
-          <div class="mt-3.5 text-[13px] text-muted"><b class="block text-brand-950">{{ t[0] }}</b>{{ t[1] }}</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ -->
   <section class="py-16 sm:py-18">
     <div class="mx-auto max-w-6xl px-5 sm:px-6">
