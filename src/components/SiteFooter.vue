@@ -29,6 +29,7 @@ const onChange = () => {
           Un interlocuteur unique pour tous vos travaux d'intérieur.
         </p>
         <p class="text-sm mt-4">📍 Zone d'intervention : {{ CONTACT.zone }}</p>
+        <p class="text-sm mt-1.5">🤝 Partenaire Espace Aubade Sélestat</p>
       </div>
 
       <div>

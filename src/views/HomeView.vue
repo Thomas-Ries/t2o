@@ -47,6 +47,15 @@ const gScroll = (dir) => {
     </div>
   </section>
 
+  <!-- Bandeau de confiance -->
+  <section class="border-y border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-5 sm:px-6 py-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-2.5 text-sm text-slate-600">
+      <span class="flex items-center gap-2 font-semibold text-slate-800">🤝 Partenaire Espace Aubade Sélestat</span>
+      <span class="flex items-center gap-2"><span class="text-brand-600">✓</span> Garantie décennale sur toutes nos réalisations</span>
+      <span class="flex items-center gap-2"><span class="text-brand-600">✓</span> Artisan local — SIREN 887 960 318</span>
+    </div>
+  </section>
+
   <!-- Présentation -->
   <section class="py-16 sm:py-18">
     <div class="mx-auto max-w-6xl px-5 sm:px-6 grid lg:grid-cols-11 gap-12 items-center">
