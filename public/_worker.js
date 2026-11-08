@@ -4,7 +4,7 @@
 
 const ALLOWED_SPECS = [
   "Plâtrerie", "Sanitaire", "Électricité", "Isolation", "Carrelage", "Peinture",
-  "Autre / plusieurs spécialités",
+  "Autre / plusieurs corps de métier",
 ];
 
 function json(data, status = 200) {
@@ -142,7 +142,7 @@ export default {
           if (/[<>{}\\]/.test(f)) return json({ ok: false, error: "caractères non autorisés" }, 400);
         }
         if (data.specialite && !ALLOWED_SPECS.includes(data.specialite)) {
-          data.specialite = "Autre / plusieurs spécialités";
+          data.specialite = "Autre / plusieurs corps de métier";
         }
 
         if (!env.RESEND_API_KEY) {

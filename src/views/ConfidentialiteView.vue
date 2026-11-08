@@ -22,7 +22,7 @@ import { CONTACT } from "../data/site";
         <h2 class="text-xl font-extrabold text-brand-950 mb-3">Quelles données et pourquoi ?</h2>
         <p>
           Le formulaire de contact collecte uniquement les informations que vous saisissez : nom, numéro de
-          téléphone, localité du projet, spécialité concernée et description de votre projet. Ces données servent
+          téléphone, localité du projet, corps de métier concerné et description de votre projet. Ces données servent
           exclusivement à répondre à votre demande de prise de contact. La base légale est votre intérêt légitime
           à nous solliciter (mesures précontractuelles).
         </p>

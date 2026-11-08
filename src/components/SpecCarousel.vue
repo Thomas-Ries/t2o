@@ -46,7 +46,7 @@ function next() {
           <div class="p-4.5">
             <h3 class="font-bold text-brand-950 mb-1.5">{{ s.title }}</h3>
             <p class="text-sm text-muted line-clamp-3">{{ s.lead }}</p>
-            <span class="mt-3 inline-flex gap-1.5 text-sm font-semibold text-brand-600">Voir la spécialité →</span>
+            <span class="mt-3 inline-flex gap-1.5 text-sm font-semibold text-brand-600">Voir le corps de métier →</span>
           </div>
         </router-link>
       </div>

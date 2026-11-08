@@ -102,9 +102,9 @@ async function submit() {
             v-model="form.specialite"
             class="w-full rounded-[10px] bg-white/[.12] border border-white/30 px-3.5 py-2.5 text-white outline-none focus:border-brand-300"
           >
-            <option value="">— Choisir une spécialité —</option>
+            <option value="">— Choisir un corps de métier —</option>
             <option v-for="s in SPECS" :key="s.slug" :value="s.title">{{ s.title }}</option>
-            <option value="Autre / plusieurs spécialités">Autre / plusieurs spécialités</option>
+            <option value="Autre / plusieurs corps de métier">Autre / plusieurs corps de métier</option>
           </select>
         </label>
         <label class="block sm:col-span-2">

@@ -33,13 +33,13 @@ const onChange = () => {
       </div>
 
       <div>
-        <h4 class="text-white font-bold mb-3.5 text-[15px]">Nos spécialités</h4>
+        <h4 class="text-white font-bold mb-3.5 text-[15px]">Nos corps de métier</h4>
         <select
           v-model="pick"
           class="w-full rounded-[10px] bg-white/10 border border-white/25 px-3.5 py-2.5 text-sm text-[#cddaf0] outline-none cursor-pointer hover:border-white/50"
           @change="onChange"
         >
-          <option value="" disabled>Choisir une spécialité…</option>
+          <option value="" disabled>Choisir un corps de métier…</option>
           <option v-for="s in SPECS" :key="s.slug" :value="s.slug">{{ s.title }}</option>
         </select>
       </div>

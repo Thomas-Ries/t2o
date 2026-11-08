@@ -36,7 +36,7 @@ const gScroll = (dir) => {
           Contactez-nous
         </router-link>
         <router-link to="/#travaux" class="rounded-full border-[1.5px] border-white/50 text-white px-5 py-3 font-semibold hover:bg-white/10 transition">
-          Découvrir nos spécialités
+          Découvrir nos corps de métier
         </router-link>
       </div>
       <ul class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#b9cbe8]">
@@ -107,7 +107,7 @@ const gScroll = (dir) => {
   <!-- Carrousel spécialités -->
   <section id="travaux" class="py-16 sm:py-18 bg-soft">
     <div class="mx-auto max-w-6xl px-5 sm:px-6">
-      <SectionHead kicker="Nos spécialités" title="Tous vos travaux, un seul artisan" sub="Six corps de métier maîtrisés en interne : découvrez nos prestations et cliquez sur une carte pour en savoir plus." />
+      <SectionHead kicker="Nos corps de métier" title="Tous vos travaux, un seul artisan" sub="Six corps de métier maîtrisés en interne : découvrez nos prestations et cliquez sur une carte pour en savoir plus." />
       <div v-reveal>
         <SpecCarousel />
       </div>
@@ -147,7 +147,7 @@ const gScroll = (dir) => {
   <section class="py-16 sm:py-18">
     <div class="mx-auto max-w-6xl px-5 sm:px-6">
       <div class="flex items-end justify-between gap-4">
-        <SectionHead kicker="Réalisations" title="Nos chantiers en images" sub="Faites défiler et cliquez sur une vignette pour découvrir la spécialité." />
+        <SectionHead kicker="Réalisations" title="Nos chantiers en images" sub="Faites défiler et cliquez sur une vignette pour découvrir le corps de métier." />
         <div class="flex gap-2.5 shrink-0 pb-10">
           <button
             class="w-10.5 h-10.5 rounded-full border border-slate-300 bg-white grid place-items-center text-brand-950 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition"
@@ -176,7 +176,7 @@ const gScroll = (dir) => {
           <span class="absolute inset-0 bg-gradient-to-t from-brand-950/85 via-transparent to-transparent" />
           <span class="absolute left-4.5 right-4.5 bottom-4 text-white">
             <b class="block text-lg">{{ s.title }}</b>
-            <span class="text-[13px] text-[#cddaf0]">{{ s.badge }} — voir la spécialité →</span>
+            <span class="text-[13px] text-[#cddaf0]">{{ s.badge }} — voir le corps de métier →</span>
           </span>
         </router-link>
       </div>

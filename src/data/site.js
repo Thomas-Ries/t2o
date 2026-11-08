@@ -118,7 +118,7 @@ export const TESTIMONIALS = [
 export const FAQ = [
   ["Sur quelle zone intervenez-vous ?", "Nous intervenons dans toute l'Alsace (Bas-Rhin et Haut-Rhin), depuis notre atelier de Saint-Pierre-Bois, dans la vallée de Villé."],
   ["Comment se passe une prise de contact ?", "Vous décrivez votre projet via le formulaire ou vous nous appelez. Nous échangeons sur votre besoin, puis nous planifions une visite sur place avant toute intervention."],
-  ["Gérez-vous plusieurs spécialités sur un même chantier ?", "Oui, c'est notre cœur de métier : plâtrerie, sanitaire, électricité, isolation, carrelage et peinture sont coordonnés par un interlocuteur unique — pas besoin de multiplier les artisans."],
+  ["Gérez-vous plusieurs corps de métier sur un même chantier ?", "Oui, c'est notre cœur de métier : plâtrerie, sanitaire, électricité, isolation, carrelage et peinture sont coordonnés par un interlocuteur unique — pas besoin de multiplier les artisans."],
   ["Quels sont vos délais d'intervention ?", "Cela dépend du chantier et de la saison. Nous vous indiquons un délai réaliste dès la visite technique, et nous le tenons."],
   ["Êtes-vous assuré ?", "Oui : T2O Bâtiment est assuré en responsabilité civile et garantie décennale, et toutes nos réalisations sont couvertes."],
   ["Faites-vous de la petite rénovation ou seulement des gros chantiers ?", "Les deux ! D'une simple pose de carrelage à une rénovation complète de logement, chaque chantier reçoit la même attention."],

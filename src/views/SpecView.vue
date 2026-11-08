@@ -81,7 +81,7 @@ watch(
     <!-- Autres spécialités -->
     <section class="pb-16 sm:pb-18">
       <div class="mx-auto max-w-6xl px-5 sm:px-6">
-        <SectionHead kicker="Nos autres spécialités" title="Un seul artisan, tous les corps de métier" />
+        <SectionHead kicker="Nos autres corps de métier" title="Un seul artisan, tous les corps de métier" />
         <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           <router-link
             v-for="o in others"
