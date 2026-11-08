@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://t2o-dzu.pages.dev/sitemap.xml
+Sitemap: https://t20-batiment.pages.dev/sitemap.xml
