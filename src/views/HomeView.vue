@@ -1,9 +1,18 @@
 <script setup>
+import { ref } from "vue";
 import { SPECS, TESTIMONIALS, FAQ, STATS } from "../data/site";
 import SectionHead from "../components/SectionHead.vue";
 import SpecCarousel from "../components/SpecCarousel.vue";
 import BaSlider from "../components/BaSlider.vue";
 import ContactSection from "../components/ContactSection.vue";
+
+// Bande « Réalisations » : navigation par chevrons.
+const gsc = ref(null);
+const gScroll = (dir) => {
+  const el = gsc.value;
+  if (!el) return;
+  el.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: "smooth" });
+};
 </script>
 
 <template>
@@ -125,8 +134,26 @@ import ContactSection from "../components/ContactSection.vue";
   <!-- Réalisations -->
   <section class="py-16 sm:py-18">
     <div class="mx-auto max-w-6xl px-5 sm:px-6">
-      <SectionHead kicker="Réalisations" title="Nos chantiers en images" sub="Faites défiler et cliquez sur une vignette pour découvrir la spécialité." />
-      <div v-reveal class="g-scroll flex gap-4.5 overflow-x-auto snap-x pb-3.5">
+      <div class="flex items-end justify-between gap-4">
+        <SectionHead kicker="Réalisations" title="Nos chantiers en images" sub="Faites défiler et cliquez sur une vignette pour découvrir la spécialité." />
+        <div class="flex gap-2.5 shrink-0 pb-10">
+          <button
+            class="w-10.5 h-10.5 rounded-full border border-slate-300 bg-white grid place-items-center text-brand-950 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition"
+            aria-label="Photos précédentes"
+            @click="gScroll(-1)"
+          >
+            ‹
+          </button>
+          <button
+            class="w-10.5 h-10.5 rounded-full border border-slate-300 bg-white grid place-items-center text-brand-950 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition"
+            aria-label="Photos suivantes"
+            @click="gScroll(1)"
+          >
+            ›
+          </button>
+        </div>
+      </div>
+      <div v-reveal ref="gsc" class="g-scroll flex gap-4.5 overflow-x-auto snap-x pb-3.5">
         <router-link
           v-for="s in SPECS"
           :key="s.slug"
