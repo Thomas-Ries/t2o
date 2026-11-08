@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import { SPECS, TESTIMONIALS, FAQ, STATS } from "../data/site";
+import { SPECS, TESTIMONIALS, FAQ, STATS, CITIES } from "../data/site";
 import SectionHead from "../components/SectionHead.vue";
 import SpecCarousel from "../components/SpecCarousel.vue";
 import BaSlider from "../components/BaSlider.vue";
@@ -197,6 +197,24 @@ const gScroll = (dir) => {
           </summary>
           <p class="px-5 pb-4.5 text-[15px] text-muted">{{ f[1] }}</p>
         </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Villes -->
+  <section class="pb-16 sm:pb-18">
+    <div class="mx-auto max-w-6xl px-5 sm:px-6">
+      <SectionHead kicker="Zone d'intervention" title="Nous intervenons partout en Alsace" sub="Basés à Saint-Pierre-Bois (vallée de Villé), nous rayonnons sur tout le Bas-Rhin et le Haut-Rhin." />
+      <div v-reveal class="flex flex-wrap gap-2.5">
+        <router-link
+          v-for="c in CITIES"
+          :key="c.slug"
+          :to="`/${c.slug}`"
+          class="rounded-full border border-slate-300 bg-white px-4.5 py-2.5 text-sm font-semibold text-brand-950 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition"
+        >
+          {{ c.name }}
+        </router-link>
+        <span class="rounded-full bg-brand-soft px-4.5 py-2.5 text-sm font-semibold text-brand-600">… et toute l'Alsace</span>
       </div>
     </div>
   </section>

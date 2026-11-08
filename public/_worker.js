@@ -19,6 +19,30 @@ function json(data, status = 200) {
   });
 }
 
+// Anti-spam : limite de débit par IP (5 demandes / 10 minutes).
+// En mémoire par isolate — suffisant pour un artisan, pas besoin de KV.
+const RATE_LIMIT = 5;
+const RATE_WINDOW_MS = 10 * 60 * 1000;
+const hits = new Map();
+
+function rateLimited(ip) {
+  const now = Date.now();
+  const arr = (hits.get(ip) || []).filter((t) => now - t < RATE_WINDOW_MS);
+  if (arr.length >= RATE_LIMIT) {
+    hits.set(ip, arr);
+    return true;
+  }
+  arr.push(now);
+  hits.set(ip, arr);
+  // Nettoyage mémoire si la map grossit trop.
+  if (hits.size > 1000) {
+    for (const [k, v] of hits) {
+      if (v.every((t) => now - t >= RATE_WINDOW_MS)) hits.delete(k);
+    }
+  }
+  return false;
+}
+
 function clean(value, max) {
   // Anti-injection : retire tout caractère de contrôle (retours ligne, nul…)
   // avant tout usage — impossible de falsifier les en-têtes ou le corps.
@@ -85,6 +109,10 @@ export default {
 
     if (url.pathname === "/api/contact" && request.method === "POST") {
       try {
+        const ip = request.headers.get("cf-connecting-ip") || "inconnu";
+        if (rateLimited(ip)) {
+          return json({ ok: false, error: "trop de demandes" }, 429);
+        }
         const d = await request.json();
 
         // Honeypot anti-spam : un robot remplit le champ caché.

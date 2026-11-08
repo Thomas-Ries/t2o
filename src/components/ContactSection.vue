@@ -2,13 +2,16 @@
 import { ref, computed } from "vue";
 import { SPECS } from "../data/site";
 
-const props = defineProps({ preset: { type: String, default: "" } });
+const props = defineProps({
+  preset: { type: String, default: "" },
+  presetLocalite: { type: String, default: "" },
+});
 
 const form = ref({
   nom: "",
   tel: "",
   specialite: props.preset,
-  localite: "",
+  localite: props.presetLocalite,
   message: "",
   site: "", // honeypot anti-spam (invisible)
 });

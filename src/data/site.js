@@ -129,3 +129,51 @@ export const STATS = [
   [5, "+", "ans d'entreprise (2020)"],
   [6, "", "corps de métier"],
 ];
+
+// Pages ville — SEO local. Le formulaire y est pré-rempli sur la localité.
+export const CITIES = [
+  {
+    slug: "renovation-strasbourg",
+    name: "Strasbourg",
+    intro:
+      "De l'appartement du centre historique à la maison de quartier, T2O Bâtiment intervient à Strasbourg et dans l'Eurométropole pour tous vos travaux de second œuvre : rénovation complète, salle de bain, électricité, peinture. Nous connaissons les contraintes des immeubles anciens — murs épais, hauteurs sous plafond, copropriétés — et nous nous adaptons à chaque bâti.",
+    autour: "Schiltigheim, Bischheim, Illkirch, Lingolsheim, Ostwald",
+  },
+  {
+    slug: "renovation-mulhouse",
+    name: "Mulhouse",
+    intro:
+      "T2O Bâtiment accompagne les Mulhousiens dans leurs projets de rénovation : appartements du centre, maisons de ville, transformations de combles. Plâtrerie, sanitaire, électricité, isolation, carrelage et peinture — un seul interlocuteur pour un chantier coordonné de bout en bout.",
+    autour: "Kingersheim, Wittenheim, Rixheim, Brunstatt, Illzach",
+  },
+  {
+    slug: "renovation-colmar",
+    name: "Colmar",
+    intro:
+      "À Colmar et dans le Kochersberg, nous réalisons vos travaux d'intérieur dans le respect des bâtis anciens si typiques de la région : rénovation de pièces humides, mise aux normes électriques, isolation thermique par l'intérieur et finitions soignées.",
+    autour: "Wintzenheim, Turckheim, Sainte-Croix-en-Plaine, Houssen, Horbourg-Wihr",
+  },
+  {
+    slug: "renovation-selestat",
+    name: "Sélestat",
+    intro:
+      "Notre atelier de Saint-Pierre-Bois se situe à quelques kilomètres de Sélestat : nous sommes l'artisan de proximité du secteur pour tous vos travaux de second œuvre. Devis clair, délais respectés, chantier propre — et un interlocuteur unique du premier appel à la réception.",
+    autour: "Villé, Saint-Pierre-Bois, Châtenois, Scherwiller, Dambach-la-Ville",
+  },
+  {
+    slug: "renovation-haguenau",
+    name: "Haguenau",
+    intro:
+      "T2O Bâtiment intervient à Haguenau et dans le nord du Bas-Rhin pour vos rénovations intérieures : salles de bain, cuisines, électricité, carrelage et peinture. Une entreprise artisanale qui prend le temps de bien faire, avec la garantie décennale sur toutes ses réalisations.",
+    autour: "Bischwiller, Reichshoffen, Brumath, Soufflenheim, Bernolsheim",
+  },
+  {
+    slug: "renovation-obernai",
+    name: "Obernai",
+    intro:
+      "Du piémont des Vosges à la plaine d'Alsace, nous intervenons à Obernai et ses alentours pour tous vos travaux d'intérieur : cloisons, salles de bain, isolation, carrelage, peinture. Un chantier coordonné par un artisan unique, sans multiplier les intervenants.",
+    autour: "Barr, Goxwiller, Rosheim, Molsheim, Boersch",
+  },
+];
+
+export const cityBySlug = (slug) => CITIES.find((c) => c.slug === slug);
